@@ -27,6 +27,3 @@ logout sessions, and data security with Firebase.
 ---
 ## 👩‍💻 Author
 *Kharina - NIM 230170129*
-
-## 👩‍💻 Author
-*Melinda - NIM 039*

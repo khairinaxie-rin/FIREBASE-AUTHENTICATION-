@@ -1,0 +1,34 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyC6cnpCpZE1LTOhzdinsKJJAkg-FUDbWy0",
+  authDomain: "cloud-auth-login.firebaseapp.com",
+  projectId: "cloud-auth-login",
+  storageBucket: "cloud-auth-login.firebasestorage.app",
+  messagingSenderId: "813103404101",
+  appId: "1:813103404101:web:760a296206f996e6e03f2c"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+async function register() {
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  try {
+    await firebase.auth().createUserWithEmailAndPassword(email, pass);
+    document.getElementById("result").innerHTML = "✅ Registrasi berhasil";
+  } catch (error) {
+    document.getElementById("result").innerHTML = "❌ " + error.message;
+  }
+}
+
+async function login() {
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  try {
+    await firebase.auth().signInWithEmailAndPassword(email, pass);
+    document.getElementById("result").innerHTML = "✅ Login berhasil";
+  } catch (error) {
+    document.getElementById("result").innerHTML = "❌ " + error.message;
+  }
+}

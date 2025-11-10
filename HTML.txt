@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>🔐 Cloud Secure Login</h2>
+
+  <input id="email" type="email" placeholder="Email" class="input">
+  <input id="password" type="password" placeholder="Password" class="input">
+
+  <button onclick="login()" class="btn login">Login</button>
+  <button onclick="register()" class="btn register">Register</button>
+
+  <p id="result"></p>
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
